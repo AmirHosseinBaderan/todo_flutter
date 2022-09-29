@@ -2,6 +2,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:todo_flutter/controllers/navigation.dart';
+import 'package:todo_flutter/widgets/shimmer_loading.dart';
 
 class Home extends StatelessWidget {
   final navController = Get.find<NavigationController>();
@@ -18,6 +19,7 @@ class Home extends StatelessWidget {
         child: Icon(Icons.add),
         tooltip: 'Add New Item',
       ),
+      body: loadingList(10),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: Obx(() => AnimatedBottomNavigationBar(
             icons: const [
