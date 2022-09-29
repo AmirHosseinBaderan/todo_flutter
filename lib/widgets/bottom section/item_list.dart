@@ -9,5 +9,5 @@ Widget itemList() => Container(
                 height: 0.5,
                 color: Colors.grey,
               ),
-          itemCount: 10),
+          itemCount: 26),
     );
