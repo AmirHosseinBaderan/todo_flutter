@@ -39,6 +39,7 @@ dependencies:
   get: ^4.6.5
   animated_bottom_navigation_bar: ^1.1.0
   fade_shimmer: ^2.0.1
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:
