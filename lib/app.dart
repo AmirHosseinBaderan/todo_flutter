@@ -14,7 +14,7 @@ class App extends StatelessWidget {
       getPages: Routes.routes,
       initialRoute: Routes.initialRoute,
       theme: ThemeData(textTheme: GoogleFonts.montserratTextTheme()),
-      defaultTransition: Transition.rightToLeftWithFade,
+      defaultTransition: Transition.cupertinoDialog,
     );
   }
 
