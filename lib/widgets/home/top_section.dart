@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:todo_flutter/controllers/task.dart';
 
 class TopSection extends StatelessWidget {
-  const TopSection({super.key});
+  final taskController = Get.find<TaskController>();
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +49,8 @@ class TopSection extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.only(left: 50, top: 5),
-            child: const Text('25 Tasks',
-                style: TextStyle(color: Colors.white, fontSize: 15)),
+            child: Obx(() => Text('${taskController.tasks.length} Tasks',
+                style: const TextStyle(color: Colors.white, fontSize: 15))),
           )
         ],
       ),
