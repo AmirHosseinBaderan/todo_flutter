@@ -17,4 +17,8 @@ class TaskController extends GetxController {
   void updateTask(int index, TaskModel task) {
     tasks[index] = task;
   }
+
+  void deleteTask(int index) {
+    tasks.removeAt(index);
+  }
 }
