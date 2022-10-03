@@ -14,7 +14,7 @@ class BottomSection extends StatelessWidget {
           color: Colors.white,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20), topRight: Radius.circular(20))),
-      child: itemList(),
+      child: ItemList(),
     );
   }
 }

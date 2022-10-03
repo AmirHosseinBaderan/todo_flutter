@@ -5,6 +5,8 @@ import 'package:todo_flutter/controllers/task.dart';
 class TopSection extends StatelessWidget {
   final taskController = Get.find<TaskController>();
 
+  TopSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(

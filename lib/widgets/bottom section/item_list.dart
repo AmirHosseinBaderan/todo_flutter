@@ -3,18 +3,22 @@ import 'package:get/get.dart';
 import 'package:todo_flutter/controllers/task.dart';
 import 'package:todo_flutter/widgets/bottom%20section/item.dart';
 
-Widget itemList() {
+class ItemList extends StatelessWidget {
   final taskController = Get.find<TaskController>();
 
-  return Container(
-    margin: const EdgeInsets.only(top: 20, left: 20, right: 20),
-    child: Obx(() => ListView.separated(
-        itemBuilder: (context, index) =>
-            taskItem(index, taskController.tasks[index]),
-        separatorBuilder: (context, index) => const Divider(
-              height: 0.5,
-              color: Colors.grey,
-            ),
-        itemCount: taskController.tasks.length)),
-  );
+  ItemList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 20, left: 1, right: 1),
+      child: Obx(() => ListView.separated(
+          itemBuilder: (context, index) =>
+              TaskItem(index: index, task: taskController.tasks[index]),
+          separatorBuilder: (context, index) => const SizedBox(
+                height: 5,
+              ),
+          itemCount: taskController.tasks.length)),
+    );
+  }
 }
