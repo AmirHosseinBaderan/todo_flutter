@@ -15,6 +15,8 @@ class UpsertTask extends StatelessWidget {
 
   String title = 'Creat New Task';
 
+  UpsertTask({super.key});
+
   @override
   Widget build(BuildContext context) {
     App.changeStatusbarColor(Colors.white, Brightness.dark);

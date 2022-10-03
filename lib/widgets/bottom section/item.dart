@@ -21,11 +21,20 @@ class TaskItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             color: Colors.redAccent,
           ),
-          child: const Align(
+          child: Align(
               alignment: Alignment.centerLeft,
               child: Padding(
-                padding: EdgeInsets.only(left: 15),
-                child: Icon(Icons.delete, color: Colors.white),
+                padding: const EdgeInsets.only(left: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Delete',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Icon(Icons.delete, color: Colors.white)
+                  ],
+                ),
               )),
         ),
         secondaryBackground: Container(
@@ -33,11 +42,19 @@ class TaskItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             color: Colors.lightGreen,
           ),
-          child: const Align(
+          child: Align(
             alignment: Alignment.centerRight,
             child: Padding(
-              padding: EdgeInsets.only(right: 15),
-              child: Icon(Icons.check, color: Colors.white),
+              padding: const EdgeInsets.only(right: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(task.isComplete ? 'Un Check' : 'Check',
+                      style: const TextStyle(color: Colors.white)),
+                  Icon(task.isComplete ? Icons.close : Icons.check,
+                      color: Colors.white)
+                ],
+              ),
             ),
           ),
         ),
@@ -47,7 +64,7 @@ class TaskItem extends StatelessWidget {
               taskController.deleteTask(index);
               break;
             case DismissDirection.endToStart:
-              taskController.completeTask(index, true);
+              taskController.completeTask(index, !task.isComplete);
               break;
             default:
               break;

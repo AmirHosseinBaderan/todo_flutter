@@ -11,14 +11,15 @@ class ItemList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 20, left: 1, right: 1),
+      margin: const EdgeInsets.only(top: 10, left: 5, right: 5),
       child: Obx(() => ListView.separated(
-          itemBuilder: (context, index) =>
-              TaskItem(index: index, task: taskController.tasks[index]),
-          separatorBuilder: (context, index) => const SizedBox(
-                height: 5,
-              ),
-          itemCount: taskController.tasks.length)),
+            itemBuilder: (context, index) =>
+                TaskItem(index: index, task: taskController.tasks[index]),
+            separatorBuilder: (context, index) => const SizedBox(
+              height: 5,
+            ),
+            itemCount: taskController.tasks.length,
+          )),
     );
   }
 }

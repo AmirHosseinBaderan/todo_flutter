@@ -11,6 +11,8 @@ class Home extends StatelessWidget {
   final navController = Get.find<NavigationController>();
   final taskController = Get.find<TaskController>();
 
+  Home({super.key});
+
   @override
   Widget build(BuildContext context) {
     App.changeStatusbarColor(Colors.lightBlue, Brightness.light);
