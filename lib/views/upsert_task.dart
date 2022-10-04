@@ -10,15 +10,13 @@ class UpsertTask extends StatelessWidget {
   final description = TextEditingController();
   final note = TextEditingController();
   final formKey = GlobalKey<FormState>();
-
   final taskController = Get.find<TaskController>();
-
-  String title = 'Creat New Task';
 
   UpsertTask({super.key});
 
   @override
   Widget build(BuildContext context) {
+    String title = 'Creat New Task';
     App.changeStatusbarColor(Colors.white, Brightness.dark);
     if (taskController.currentTask.value.text != null) {
       title = 'Edit `${taskController.currentTask.value.title}`';
@@ -30,7 +28,7 @@ class UpsertTask extends StatelessWidget {
         child: Scaffold(
           body: SafeArea(
               child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 margin: const EdgeInsets.all(20),
