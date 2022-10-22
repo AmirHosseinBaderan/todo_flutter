@@ -3,17 +3,8 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
-  <component name="AutomaticModuleUnloader">
-    <loaded-modules>
-      <module name="todo_flutter" />
-    </loaded-modules>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b68d0a4-9124-441e-9d3d-2754d6ab67f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/views/upsert_task.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/upsert_task.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo_flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/todo_flutter.iml" afterDir="false" />
-    </list>
+    <list default="true" id="5b68d0a4-9124-441e-9d3d-2754d6ab67f7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +52,7 @@
     </layout>
   </component>
   <component name="UnloadedModulesList">
+    <module name="todo_flutter" />
     <module name="todo_flutter_android" />
   </component>
 </project>
